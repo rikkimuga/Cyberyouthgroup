@@ -1,0 +1,112 @@
+
+/* --- Hero Section (Image and Text) --- */
+
+.hero-section {
+    position: relative;
+    height: 550px;
+    width: 95%; 
+    margin-top: 10px;
+    margin-left: auto; margin-right: auto;
+    background-image: url('images/333copy.jpg');
+
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center; 
+    border-radius: 30px;
+
+}
+    .hero-section :hover {
+        transform: scale(1.02);
+        transition: transform 0.5s;
+    }
+
+
+
+.hero-text-overlay {
+    padding: 0 100px; 
+}
+
+.hero-text-overlay h1 {
+    color: #E9EEF2;
+    font-size: 40px; 
+    font-weight: 500; 
+    line-height: 1.2;
+    margin-left: 350px;
+    opacity: 100%;
+    text-align: center;
+}
+
+/* --- 5. CONTACT CARDS SECTION --- */
+
+.contact-cards-section {
+    background-color: #001f40; /* Dark blue background */
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cards-grid {
+    display: grid;
+    /* Forces 2 wide columns for the capsule shape, centered in the container */
+    grid-template-columns: repeat(2, minmax(400px, 1fr)); 
+    gap: 30px;
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: #ffffff; /* White card background */
+    padding: 20px 30px; 
+    
+    /* CRITICAL for the exact look: Uses a massive radius to create the capsule shape */
+    border-radius: 9999px; 
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox for perfect horizontal and vertical alignment */
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+}
+
+.card-icon {
+    color: #ff6600; /* Orange icon */
+    font-size: 30px; 
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+/* Grouping for the text elements (Label and Detail) */
+.card-text-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-label {
+    color: #001f40; /* Dark blue for label/heading */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; 
+}
+
+.card-detail {
+    color: #333; /* Darker text for detail */
+    font-size: 16px;
+    margin: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 950px) {
+    .cards-grid {
+        grid-template-columns: 1fr; /* Stack all cards vertically */
+        max-width: 500px; 
+    }
+}

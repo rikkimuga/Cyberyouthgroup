@@ -1,0 +1,447 @@
+/* Basic Variables */
+:root {
+  
+    --text-color: #ffffff; /* White text */
+    --donate-button-bg: #ff6600; /* Orange donate button */
+    --font-family: times new roman , serif; 
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+background-image:url(images/vector.png) ;
+background-color: #001f40;
+    
+}
+
+/* --- Header & Nav Bar --- */
+
+.main-header {
+    width: 100%;
+    /* Position relative to contain absolutely positioned header content */
+    position: relative; 
+}
+
+.header-content {
+    /* Set header content to be transparent and float over the image */
+    background-color: transparent; 
+    padding: 10px 40px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: absolute; 
+    width: 100%;
+    box-sizing: border-box; 
+    z-index: 10; 
+    margin-top: 15px;
+}
+
+.logo-image {
+    width: 68px; 
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* Apply the dark blue background ONLY to the navigation element */
+.main-nav {
+    backdrop-filter: blur(60px);
+    /* Adjust padding to make the blue background look like a segmented bar */
+    padding: 15px 20px; 
+    border-radius: 20px; /* Optional: adds a slight rounded edge */
+}
+
+.main-nav a:hover {
+    color: #ff6600; /* Orange on hover */}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 35px; 
+}
+/* Remove margin from the first item if needed */
+.main-nav li:first-child {
+    margin-left: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    white-space: nowrap; /* Prevents wrapping on small screens */
+}
+
+/* Donate Button Styling - Ensured it remains ORANGE */
+.donate-button {
+    
+    background-color: #ff6600;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+}
+.donate-button:hover {
+    background-color: #001f40; /* Darker orange on hover */
+}
+
+
+/* --- Hero Section (Image and Text) --- */
+
+.hero-section {
+    position: relative;
+    height: 550px;
+    width: 95%; 
+    margin-top: 10px;
+    margin-left: auto; margin-right: auto;
+    background-image: url('images/hero.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center; 
+    border-radius: 30px;
+
+}
+    .hero-section :hover {
+        transform: scale(1.02);
+        transition: transform 0.5s;
+    }
+
+
+
+.hero-text-overlay {
+    padding: 0 100px; 
+}
+
+.hero-text-overlay h1 {
+    color: #E9EEF2;
+    font-size: 40px; 
+    font-weight: 500; 
+    line-height: 1.2;
+    margin-left: 350px;
+    opacity: 100%;
+    text-align: center;
+}
+
+/* --- Our Story Section --- */
+
+/* --- Basic Styles --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Our Story Section --- */
+
+/*
+ * Simplified CSS for the "Our Story" Section
+ * Place this content into your style.css file.
+ */
+
+/* --- Basic Styles --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Story Section Background & Spacing --- */
+.story-section {
+   
+    padding: 80px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.story-container {
+    max-width: 1100px; 
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px;
+    position: relative; /* For the absolute line positioning */
+}
+
+/* --- Vertical Dashed Timeline Line --- */
+
+/* --- Content Layout (Flexbox for image and text) --- */
+.story-content {
+    position: relative; 
+    z-index: 2; /* Sits above the line */
+}
+
+.story-details {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    gap: 40px; 
+}
+
+/* --- Heading Style --- */
+.story-title {
+    color: #ff6600; /* Orange color */
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: right; 
+    padding-right: 30%; /* Approximate alignment to the line */
+}
+
+/* --- Image Styling --- */
+.story-image-wrapper {
+    flex-shrink: 0; 
+    width: 350px; 
+    height: 250px; 
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* --- Text Styling (FIX: Ensures white text) --- */
+.story-text-wrapper {
+    flex-grow: 1; 
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px; 
+    padding-left: 10px; 
+}
+
+/* FIX: Explicitly target the paragraph to ensure it is white */
+.story-text-wrapper p {
+    color: #ffffff; 
+    margin-top: 0;   
+    margin-bottom: 0;
+}
+
+/* --- Read More Button Styling --- */
+.read-more-button {
+    display: inline-block;
+    background-color: #ff6600; /* Orange button */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.read-more-button:hover {
+    background-color: #e65c00; 
+}
+
+/* --- Global Reset and Setup --- */
+body {
+    margin: 0;
+   font-family: "EB Garamond", serif;
+  
+
+}
+
+/* --- Section Container (Dark Background) --- */
+.vm-section {
+   
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+
+.vm-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: center;
+}
+
+/* --- Cards Layout --- */
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background-color: #f7f7f7; /* Light card background */
+    max-width: 350px;
+    padding: 50px;
+    border-radius: 20px; /* Rounded corners */
+    text-align: left;
+}
+
+.card-title {
+    color: #ff6600; /* Orange heading */
+    font-size: 28px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* --- Image Styling --- */
+.card-image-wrapper {
+    height: 150px; 
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card-image {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 50px;
+}
+
+/* --- Card Text Styling --- */
+.card p, .mission-card li {
+    color: #001f40; /* Dark text on light background */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.mission-card ul {
+    list-style: none; 
+    padding-left: 0;
+}
+
+/* --- Join Us Call-to-Action (Dark Background Text) --- */
+.cta-title {
+    color: #ff6600; /* Orange heading */
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.join-us-cta p {
+    color: #ffffff; /* White text */
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.register-button {
+    background-color: #ff6600; /* Orange button */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+}
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 1080px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* --- Footer Styling --- */
+
+.main-footer {
+    background-color: #E9EEF2; /* Dark blue background */
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    text-align: center; 
+}
+
+/* --- 1. Branding (Logo and Group Name) --- */
+.footer-branding {
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    display: block; 
+    margin: 0 auto 5px auto; 
+}
+
+.group-name {
+    color: #001f40 ; 
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* --- NEW: Tagline/Summary Text --- */
+.footer-tagline {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.footer-tagline p {
+    color: #001f40;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- 2. Navigation Links --- */
+.footer-nav {
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    color: #001f40; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.footer-nav a:hover {
+    color: #ff6600; 
+}
+
+/* --- 3. Contact Info and Copyright --- */
+.copyright, .contact-info {
+    color: #001f40; 
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* --- 4. Social Media Icons Placeholder --- */
+/* --- Social Media Icons Styling (Font Awesome) --- */
+
+.social-links {
+    margin-top: 20px;
+    
+}
+
+.social-links a {
+    display: inline-block;
+    color:#001f40;
+    /* REMOVED: width, height, line-height, text-align, font-weight */
+    padding: 8px; /* Use padding instead of fixed height/width */
+    border-radius: 60%; 
+    margin: 0 8px;
+    font-size: 18px; /* Makes the icon visible */
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ff6600; /* Orange background on hover */
+    
+}
